@@ -1,2 +1,9 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿struct F1Racing
+{
+    public int seasonnum;
+    public string winnerpilot;
+    public string winnerteam;
+    public int numofraces;
+    public int numofracers;
+    public int numofteams;
+}
