@@ -17,6 +17,36 @@ else
     Console.WriteLine($"A versenyző {WinnerNumber(inname, data)} szezont nyert!");
 }
 
+string[] teamnames = new string[data.Length];
+int numteams = 0;
+for (int i = 0; i < data.Length; i++)
+{
+    if (!teamnames.Contains(data[i].winnerteam))
+    {
+        teamnames[numteams] = data[i].winnerteam;
+        numteams++;
+    }
+}
+int dbmax = 0;
+string maxname = "";
+for (int i = 0; i < teamnames.Length; i++)
+{
+    int db = 0;
+    for (int j = 0; j < data.Length; j++)
+    {
+        if (teamnames[i] == data[j].winnerteam)
+        {
+            db++;
+        }
+    }
+    if (dbmax < db)
+    {
+        dbmax = db;
+        maxname = teamnames[i];
+    }
+}
+Console.WriteLine($"7. feladat: Legtöbb konstruktőri díjjal rendelkező csapat: {maxname}");
+
 int WinnerNumber(string name, F1Racing[] data)
 {
     int db = 0;
