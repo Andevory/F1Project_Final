@@ -5,6 +5,8 @@ for (int i = 0; i < lines.Length; i++)
     data[i] = new F1Racing(lines[i]);
 }
 
+Console.WriteLine($"4. feladat: F1 versenyek száma: {data.Length}");
+
 struct F1Racing
 {
     public int seasonnum;
