@@ -47,6 +47,16 @@ for (int i = 0; i < teamnames.Length; i++)
 }
 Console.WriteLine($"7. feladat: Legtöbb konstruktőri díjjal rendelkező csapat: {maxname}");
 
+int max = 0;
+for (int i = 0; i < data.Length; i++)
+{
+    if (data[max].numofracers < data[i].numofracers)
+    {
+        max = i;
+    }
+}
+Console.WriteLine($"8. feladat: A legtöbb versenyző az alábbi szezonban volt pályán: {data[max].seasonnum}, abban az évben a győztes csapat: {data[max].winnerteam} és a szezont {data[max].winnerpilot} nyerte!");
+
 int WinnerNumber(string name, F1Racing[] data)
 {
     int db = 0;
