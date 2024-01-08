@@ -6,6 +6,16 @@ for (int i = 0; i < lines.Length; i++)
 }
 
 Console.WriteLine($"4. feladat: F1 versenyek száma: {data.Length}");
+Console.Write("Kérem a versenyző nevét: ");
+string inname = Console.ReadLine();
+if (WinnerNumber(inname, data) == 0)
+{
+    Console.WriteLine("A versenyző sosem nyert szezont!");
+}
+else
+{
+    Console.WriteLine($"A versenyző {WinnerNumber(inname, data)} szezont nyert!");
+}
 
 int WinnerNumber(string name, F1Racing[] data)
 {
