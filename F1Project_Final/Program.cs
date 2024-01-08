@@ -7,6 +7,19 @@ for (int i = 0; i < lines.Length; i++)
 
 Console.WriteLine($"4. feladat: F1 versenyek száma: {data.Length}");
 
+int WinnerNumber(string name, F1Racing[] data)
+{
+    int db = 0;
+    for (int i = 0; i < data.Length; i++)
+    {
+        if (name == data[i].winnerpilot)
+        {
+            db++;
+        }
+    }
+    return db;
+}
+
 struct F1Racing
 {
     public int seasonnum;
